@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>عيد ميلاد سعيد ❤✨🎂</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    .floating-img {
+  position: fixed;
+  bottom: -100px;
+  width: 50px;
+  height: auto;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 1;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+    body {
+      
+      #countup-timer {
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #000000, #3a1a47);
+  color: #f6e6fa;
+  border: 2px solid #e0b0ff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+#countup-timer::before {
+  content: "🌹";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  font-size: 1.5em;
+}
+
+#countup-timer::after {
+  content: "🖤";
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  font-size: 1.5em;
+}
+
+      margin: 0;
+      padding: 20px;
+      font-family: 'Tajawal', sans-serif;
+      color: #3a1a47;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #f8c291, #6a0572, #f6e58d);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #2e1438;
+    }
+
+    p, ol {
+      font-size: 1.3em;
+      line-height: 1.5em;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #4b2c62;
+    }
+
+    ol {
+      background-color: #fff7d1;
+      border-radius: 20px;
+      padding: 25px 40px;
+      box-shadow: 0 0 15px rgba(74, 35, 90, 0.2);
+      text-align: right;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #732d91;
+      color: #f3eac2;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #4b1e62;
+    }
+
+    #playBtn {
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+
+    .section {
+      display: none;
+      width: 100%;
+      max-width: 700px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .floating-img {
+      position: fixed;
+      bottom: -60px;
+      width: 40px;
+      height: 40px;
+      opacity: 0.8;
+      pointer-events: none;
+      z-index: 1;
+      animation: floatUp 10s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .timeline-container {
+      border-left: 4px solid #2e1438;
+      margin: 40px auto;
+      padding-left: 30px;
+      text-align: right;
+      position: relative;
+      max-width: 600px;
+    }
+
+    .timeline-container .event {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .timeline-container .event::before {
+      content: "";
+      position: absolute;
+      left: -36px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #2e1438;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .timeline-container .date {
+      font-weight: bold;
+      color: #f7e7d3;
+      background: #3a1a47;
+      padding: 5px 12px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 5px;
+      font-family: monospace;
+    }
+
+    .timeline-container .desc {
+      font-size: 1.2em;
+      color: #2c1135;
+      font-style: italic;
+    }
+
+    /* عداد الوقت */
+    #countup-timer {
+      margin-top: 25px;
+      font-size: 1.4em;
+      color: #3a1a47;
+      font-weight: bold;
+      background: #f6e58d99;
+      border-radius: 12px;
+      padding: 15px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الصفحة الرئيسية -->
+  <div id="home" class="section active">
+    <h1>عيد ميلاد سعيد يا أجمل حاجة في حياتي 🎂🌸💞</h1>
+    <p>النهاردة الدنيا اتولدت فيها أجمل إنسانة وده حاجه بسيطه كده يارب تعجبك 🤭.. تعالي نشوف مع بعض ♥</p>
+    <button id="startBtn">يلاااا بيناا 💌✨</button>
+
+    <!-- عداد الوقت من 23 مارس 2024 -->
+    <div id="countup-timer">
+      ...We've been together for <br />
+      <span id="days">0</span> يوم
+      <span id="hours">00</span> :
+      <span id="minutes">00</span> :
+      <span id="seconds">00</span>
+    </div>
+  </div>
+
+  
+
+  <!-- رسالة حب -->
+  <div id="loveLetter" class="section">
+    <h1>💌 A special message for you on your big day 🥳🌍🫀</h1>
+    <p>
+      𝘖𝘯 𝘢 𝘥𝘢𝘺 𝘭𝘪𝘬𝘦 𝘵𝘩𝘪𝘴, 𝘴𝘰𝘮𝘦 𝘺𝘦𝘢𝘳𝘴 𝘢𝘨𝘰 𝘵𝘩𝘦 𝘶𝘯𝘪𝘷𝘦𝘳𝘴𝘦 𝘣𝘦𝘤𝘢𝘮𝘦 𝘮𝘰𝘳𝘦 𝘣𝘦𝘢𝘶𝘵𝘪𝘧𝘶𝘭  𝘣𝘦𝘤𝘢𝘶𝘴𝘦 𝘺𝘰𝘶 𝘸𝘦𝘳𝘦 𝘣𝘰𝘳𝘯  𝘐 𝘰𝘧𝘵𝘦𝘯 𝘸𝘰𝘯𝘥𝘦𝘳 𝘩𝘰𝘸 𝘰𝘯𝘦 𝘴𝘰𝘶𝘭 𝘤𝘢𝘯 𝘩𝘰𝘭𝘥 𝘴𝘰 𝘮𝘶𝘤𝘩 𝘭𝘪𝘨𝘩𝘵 𝘩𝘰𝘸 𝘺𝘰𝘶𝘳
+ 𝘱𝘳𝘦𝘴𝘦𝘯𝘤𝘦 𝘢𝘭𝘰𝘯𝘦 𝘤𝘢𝘯 𝘴𝘩𝘪𝘧𝘵 𝘵𝘩𝘦 𝘦𝘯𝘦𝘳𝘨𝘺 𝘰𝘧 𝘢 𝘸𝘩𝘰𝘭𝘦 𝘥𝘢𝘺 𝘢 𝘸𝘩𝘰𝘭𝘦 𝘭𝘪𝘧𝘦 𝘉𝘦𝘧𝘰𝘳𝘦 𝘺𝘰𝘶 𝘐 𝘵𝘩𝘰𝘶𝘨𝘩𝘵 𝘐 𝘶𝘯𝘥𝘦𝘳𝘴𝘵𝘰𝘰𝘥 𝘸𝘩𝘢𝘵 𝘭𝘰𝘷𝘦 𝘮𝘦𝘢𝘯𝘵 𝘣𝘶𝘵 𝘺𝘰𝘶 𝘴𝘩𝘰𝘸𝘦𝘥 𝘮𝘦 𝘵𝘩𝘢𝘵 𝘳𝘦𝘢𝘭 𝘭𝘰𝘷𝘦 𝘪𝘴𝘯’𝘵 𝘫𝘶𝘴𝘵 𝘢𝘣𝘰𝘶𝘵 𝘧𝘦𝘦𝘭𝘪𝘯𝘨𝘴
+  𝘐𝘵’𝘴 𝘢𝘣𝘰𝘶𝘵 𝘱𝘳𝘦𝘴𝘦𝘯𝘤𝘦 𝘬𝘪𝘯𝘥𝘯𝘦𝘴𝘴 𝘶𝘯𝘥𝘦𝘳𝘴𝘵𝘢𝘯𝘥𝘪𝘯𝘨, 𝘢𝘯𝘥 𝘤𝘩𝘰𝘰𝘴𝘪𝘯𝘨 𝘦𝘢𝘤𝘩 𝘰𝘵𝘩𝘦𝘳 𝘰𝘷𝘦𝘳 𝘢𝘯𝘥 𝘰𝘷𝘦𝘳 𝘢𝘨𝘢𝘪𝘯 𝘚𝘪𝘯𝘤𝘦 𝘺𝘰𝘶 𝘦𝘯𝘵𝘦𝘳𝘦𝘥 𝘮𝘺 𝘭𝘪𝘧𝘦 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘩𝘢𝘴 𝘤𝘩𝘢𝘯𝘨𝘦𝘥 𝘚𝘶𝘥𝘥𝘦𝘯𝘭𝘺 𝘴𝘪𝘮𝘱𝘭𝘦 𝘵𝘩𝘪𝘯𝘨𝘴 𝘣𝘦𝘤𝘢𝘮𝘦 𝘣𝘦𝘢𝘶𝘵𝘪𝘧𝘶𝘭 𝘴𝘶𝘯𝘴𝘦𝘵𝘴 𝘴𝘰𝘯𝘨𝘴 𝘴𝘪𝘭𝘦𝘯𝘤𝘦
+   𝘌𝘷𝘦𝘯 𝘵𝘩𝘦 𝘩𝘢𝘳𝘥 𝘥𝘢𝘺𝘴 𝘥𝘪𝘥𝘯’𝘵 𝘧𝘦𝘦𝘭 𝘢𝘴 𝘩𝘦𝘢𝘷𝘺 𝘣𝘦𝘤𝘢𝘶𝘴𝘦 𝘬𝘯𝘰𝘸𝘪𝘯𝘨 𝘐 𝘩𝘢𝘥 𝘺𝘰𝘶 𝘵𝘰 𝘤𝘰𝘮𝘦 𝘣𝘢𝘤𝘬 𝘵𝘰 𝘮𝘢𝘥𝘦 𝘢𝘭𝘭 𝘵𝘩𝘦 𝘥𝘪𝘧𝘧𝘦𝘳𝘦𝘯𝘤𝘦 𝘠𝘰𝘶'𝘳𝘦 𝘯𝘰𝘵 𝘫𝘶𝘴𝘵 𝘵𝘩𝘦 𝘱𝘦𝘳𝘴𝘰𝘯 𝘐 𝘭𝘰𝘷𝘦 𝘺𝘰𝘶'𝘳𝘦 𝘮𝘺 𝘣𝘦𝘴𝘵 𝘧𝘳𝘪𝘦𝘯𝘥 𝘮𝘺 𝘱𝘦𝘢𝘤𝘦 𝘮𝘺 𝘮𝘪𝘳𝘳𝘰r 𝘢𝘯𝘥
+ 𝘵𝘩𝘦 𝘴𝘢𝘧𝘦𝘴𝘵 𝘱𝘭𝘢𝘤𝘦 𝘐'𝘷𝘦 𝘦𝘷𝘦𝘳 𝘬𝘯𝘰𝘸𝘯 𝘐 𝘭𝘰𝘷𝘦 𝘵𝘩𝘦 𝘸𝘢𝘺 𝘺𝘰𝘶 𝘭𝘢𝘶𝘨𝘩 𝘧𝘳𝘰𝘮 𝘺𝘰𝘶𝘳 𝘩𝘦𝘢𝘳𝘵 𝘵𝘩𝘦 𝘸𝘢𝘺 𝘺𝘰𝘶𝘳 𝘦𝘺𝘦𝘴 𝘴𝘱𝘢𝘳𝘬𝘭𝘦 𝘸𝘩𝘦𝘯 𝘺𝘰𝘶'𝘳𝘦 𝘦𝘹𝘤𝘪𝘵𝘦𝘥 𝘵𝘩𝘦 𝘸𝘢𝘺 𝘺𝘰𝘶 𝘤𝘢𝘳𝘦 𝘥𝘦𝘦𝘱𝘭𝘺 𝘢𝘣𝘰𝘶𝘵 𝘵𝘩𝘦 𝘵𝘩𝘪𝘯𝘨𝘴 𝘢𝘯𝘥 𝘱𝘦𝘰𝘱𝘭𝘦 𝘺𝘰𝘶 𝘭𝘰𝘷𝘦
+  𝘐 𝘦𝘷𝘦𝘯 𝘭𝘰𝘷𝘦 𝘵𝘩𝘦 𝘮𝘰𝘮𝘦𝘯𝘵𝘴 𝘸𝘩𝘦𝘯 𝘺𝘰𝘶 𝘨𝘰 𝘲𝘶𝘪𝘦𝘵 𝘢𝘯𝘥 𝘵𝘩𝘰𝘶𝘨𝘩𝘵𝘧𝘶𝘭 𝘣𝘦𝘤𝘢𝘶𝘴𝘦 𝘦𝘷𝘦𝘯 𝘪𝘯 𝘺𝘰𝘶𝘳 𝘴𝘪𝘭𝘦𝘯𝘤𝘦 𝘵𝘩𝘦𝘳𝘦’𝘴 𝘴𝘰𝘮𝘦𝘵𝘩𝘪𝘯𝘨 𝘵𝘩𝘢𝘵 𝘤𝘢𝘭𝘮𝘴 𝘮𝘺 𝘤𝘩𝘢𝘰𝘴 𝘞𝘪𝘵𝘩 𝘺𝘰𝘶 𝘭𝘪𝘧𝘦 𝘧𝘦𝘦𝘭𝘴 𝘴𝘰𝘧𝘵𝘦𝘳 𝘞𝘪𝘵𝘩 𝘺𝘰𝘶  𝘐 𝘧𝘦𝘦𝘭 𝘴𝘦𝘦𝘯 𝘩𝘦𝘢𝘳𝘥 𝘢𝘯𝘥 𝘶𝘯𝘥𝘦𝘳𝘴𝘵𝘰𝘰𝘥. 𝘠𝘰𝘶 𝘮𝘢𝘬𝘦
+ 𝘮𝘦 𝘸𝘢𝘯𝘵 𝘵𝘰 𝘣𝘦 𝘣𝘦𝘵𝘵𝘦𝘳 𝘯𝘰𝘵 𝘫𝘶𝘴𝘵 𝘧𝘰𝘳 𝘮𝘺𝘴𝘦𝘭𝘧 𝘣𝘶𝘵 𝘧𝘰𝘳 𝘶𝘴 𝘠𝘰𝘶 𝘮𝘢𝘬𝘦 𝘮𝘦 𝘥𝘳𝘦𝘢𝘮 𝘣𝘦𝘺𝘰𝘯𝘥 𝘸𝘩𝘢𝘵 𝘐 𝘵𝘩𝘰𝘶𝘨𝘩𝘵 𝘐 𝘸𝘢𝘴 𝘤𝘢𝘱𝘢𝘣𝘭𝘦 𝘰𝘧 𝘠𝘰𝘶 𝘣𝘦𝘭𝘪𝘦𝘷𝘦 𝘪𝘯 𝘮𝘦 𝘸𝘩𝘦𝘯 𝘐 𝘥𝘰𝘯’𝘵 𝘣𝘦𝘭𝘪𝘦𝘷𝘦 𝘪𝘯 𝘮𝘺𝘴𝘦𝘭𝘧 𝘢𝘯𝘥 𝘵𝘩𝘢𝘵 𝘢𝘭𝘰𝘯𝘦 𝘨𝘪𝘷𝘦𝘴 𝘮𝘦 𝘴𝘵𝘳𝘦𝘯𝘨𝘵𝘩 𝘵𝘰 𝘧𝘢𝘤𝘦 𝘢𝘯𝘺𝘵𝘩𝘪𝘯𝘨 𝘠𝘰𝘶’𝘷𝘦 𝘵𝘢𝘶𝘨𝘩𝘵 𝘮𝘦
+ 𝘵𝘩𝘢𝘵 𝘭𝘰𝘷𝘦 𝘪𝘴𝘯’𝘵 𝘫𝘶𝘴𝘵 𝘢 𝘧𝘦𝘦𝘭𝘪𝘯𝘨 𝘪𝘵’𝘴 𝘢 𝘤𝘩𝘰𝘪𝘤𝘦 𝘈 𝘣𝘦𝘢𝘶𝘵𝘪𝘧𝘶𝘭 𝘦𝘷𝘦𝘳𝘺𝘥𝘢𝘺 𝘥𝘦𝘤𝘪𝘴𝘪𝘰𝘯 𝘵𝘰 𝘴𝘵𝘢𝘯𝘥 𝘣𝘦𝘴𝘪𝘥𝘦 𝘴𝘰𝘮𝘦𝘰𝘯𝘦 𝘦𝘷𝘦𝘯 𝘸𝘩𝘦𝘯 𝘭𝘪𝘧𝘦 𝘨𝘦𝘵𝘴 𝘩𝘢𝘳𝘥 𝘈𝘯𝘥 𝘐 𝘱𝘳𝘰𝘮𝘪𝘴𝘦 𝘵𝘰𝘥𝘢𝘺 𝘢𝘯𝘥 𝘢𝘭𝘸𝘢𝘺𝘴, 𝘵𝘰 𝘤𝘩𝘰𝘰𝘴𝘦 𝘺𝘰𝘶 𝘕𝘰 𝘮𝘢𝘵𝘵𝘦𝘳 𝘸𝘩𝘢𝘵 𝘩𝘢𝘱𝘱𝘦𝘯𝘴 𝘐 𝘸𝘢𝘯𝘵 𝘺𝘰𝘶 𝘵𝘰 𝘬𝘯𝘰𝘸
+ 𝘵𝘩𝘪𝘴: 𝘠𝘰𝘶 𝘢𝘳𝘦 𝘵𝘩𝘦 𝘧𝘪𝘳𝘴𝘵 𝘵𝘩𝘪𝘯𝘨 𝘐 𝘵𝘩𝘪𝘯𝘬 𝘰𝘧 𝘸𝘩𝘦𝘯 𝘐 𝘸𝘢𝘬𝘦 𝘶𝘱 𝘢𝘯𝘥 𝘵𝘩𝘦 𝘭𝘢𝘴𝘵 𝘵𝘩𝘪𝘯𝘨 𝘐 𝘸𝘩𝘪𝘴𝘱𝘦𝘳 𝘵𝘰 𝘪𝘯 𝘮𝘺 𝘩𝘦𝘢𝘳𝘵 𝘣𝘦𝘧𝘰𝘳𝘦 𝘐 𝘴𝘭𝘦𝘦𝘱 𝘠𝘰𝘶 𝘭𝘪𝘷𝘦 𝘪𝘯 𝘦𝘷𝘦𝘳𝘺 𝘣𝘦𝘢𝘵 𝘰𝘧 𝘮𝘺 𝘩𝘦𝘢𝘳𝘵 𝘠𝘰𝘶 𝘢𝘳𝘦 𝘢𝘯𝘥 𝘸𝘪𝘭𝘭
+ 𝘢𝘭𝘸𝘢𝘺𝘴 𝘣𝘦, 𝘮𝘺 𝘧𝘰𝘳𝘦𝘷𝘦𝘳 𝘏𝘢𝘱𝘱𝘺 𝘣𝘪𝘳𝘵𝘩𝘥𝘢𝘺 𝘮𝘺 𝘭𝘰𝘷𝘦  𝘔𝘢𝘺 𝘦𝘷𝘦𝘳𝘺 𝘺𝘦𝘢𝘳 𝘣𝘳𝘪𝘯𝘨 𝘺𝘰𝘶 𝘤𝘭𝘰𝘴𝘦𝘳 𝘵𝘰 𝘵𝘩𝘦 𝘭𝘪𝘧𝘦 𝘺𝘰𝘶 𝘥𝘳𝘦𝘢𝘮 𝘰𝘧  𝘔𝘢𝘺 𝘫𝘰𝘺 𝘧𝘪𝘯𝘥 𝘺𝘰𝘶 𝘪𝘯 𝘶𝘯𝘦𝘹𝘱𝘦𝘤𝘵𝘦𝘥 𝘸𝘢𝘺𝘴 𝘔𝘢𝘺 𝘺𝘰𝘶 𝘯𝘦𝘷𝘦𝘳
+  𝘧𝘰𝘳𝘨𝘦𝘵 𝘩𝘰𝘸 𝘥𝘦𝘦𝘱𝘭𝘺 𝘺𝘰𝘶’𝘳𝘦 𝘭𝘰𝘷𝘦𝘥 𝘯𝘰𝘵 𝘫𝘶𝘴𝘵 𝘣𝘺 𝘮𝘦 𝘣𝘶𝘵 𝘣𝘺 𝘵𝘩𝘦 𝘸𝘰𝘳𝘭𝘥 𝘵𝘩𝘢𝘵’𝘴 𝘭𝘶𝘤𝘬𝘺 𝘵𝘰 𝘩𝘢𝘷𝘦 𝘺𝘰𝘶 𝘪𝘯 𝘪𝘵  𝘈𝘯𝘥  𝘢𝘴 𝘧𝘰𝘳 𝘶𝘴 𝘛𝘩𝘪𝘴 𝘪𝘴 𝘰𝘯𝘭𝘺 𝘵𝘩𝘦 𝘣𝘦𝘨𝘪𝘯𝘯𝘪𝘯𝘨 𝘛𝘩𝘦𝘳𝘦 𝘢𝘳𝘦 𝘴𝘵𝘪𝘭𝘭 𝘢 𝘮𝘪𝘭𝘭𝘪𝘰𝘯 𝘮𝘦𝘮𝘰𝘳𝘪𝘦𝘴 𝘵𝘰 𝘤𝘳𝘦𝘢𝘵𝘦  𝘢 𝘭𝘪𝘧𝘦𝘵𝘪𝘮𝘦 𝘰𝘧 𝘭𝘢𝘶𝘨𝘩𝘵𝘦𝘳 𝘸𝘢𝘪𝘵𝘪𝘯𝘨 𝘢𝘯𝘥 𝘢 𝘭𝘰𝘷𝘦 𝘵𝘩𝘢𝘵 𝘸𝘪𝘭𝘭 𝘰𝘯𝘭𝘺 𝘨𝘳𝘰𝘸 𝘴𝘵𝘳𝘰𝘯𝘨𝘦𝘳 𝘸𝘪𝘵𝘩 𝘵𝘪𝘮𝘦 
+  𝘐 𝘭𝘰𝘷𝘦 𝘺𝘰𝘶 𝘮𝘰𝘳𝘦 𝘵𝘩𝘢𝘯 𝘸𝘰𝘳𝘥𝘴 𝘸𝘪𝘭𝘭 𝘦𝘷𝘦𝘳 𝘣𝘦 𝘢𝘣𝘭𝘦 𝘵𝘰 𝘩𝘰𝘭𝘥 𝘏𝘢𝘱𝘱𝘺 𝘣𝘪𝘳𝘵𝘩𝘥𝘢𝘺… 𝘵𝘰 𝘵𝘩𝘦 𝘳𝘦𝘢𝘴𝘰𝘯 𝘐 𝘣𝘦𝘭𝘪𝘦𝘷𝘦 𝘪𝘯 𝘮𝘢𝘨𝘪𝘤. ❤
+    </p>
+    <button id="toReasonBtn">عايزة تعرفي بحبك ليه؟ 😌✨</button>
+    <button id="backToHomeFromLove" style="background-color: #2e1438; margin-top: 10px;">رجوع</button>
+  </div>
+
+  <!-- أسباب الحب -->
+  <div id="reason" class="section">
+    <h1>19 سبب بحبك ليه ❤✨🌑🏵</h1>
+    <ol>
+      <li>لإنك دايمًا بتخليني أضحك مهما كانت الظروف.</li>
+      <li>لحنك الحلو اللي بيسمعه قلبي كل يوم.</li>
+      <li>طريقتك في الاهتمام بكل تفاصيل .</li>
+      <li>دعمك ليه مهما حصل وصعبت الظروف.</li>
+      <li>اما بتيجي تحكيلي عن يومك</li>
+      <li>ضحكتك اللي بتنور أيامي.</li>
+      <li>حنيتك اللي دايمًا بتطمني.</li>
+      <li>الاوقات اللي بتيجي تطمنيني فيها وقت اما تفكيري بيسرح </li>
+      <li>ذكاءك اللي دايمًا بيشدني.</li>
+      <li>عشقك للحياة والطموح اللي عندك.</li>
+      <li>صدقك في الكلام والأفعال.</li>
+      <li>قلبك الكبير واللي بيحب بجد.</li>
+      <li>صبرك معي حتى حتي اما بعمل حاجات غبيه.</li>
+      <li>طريقة عنايتك بنفسك وباللي حواليكي.</li>
+      <li>وجودك جنبي بيخليني أحس بالأمان.</li>
+      <li>لحظات اللي بنقضيها سوا.</li>
+      <li>الأمل اللي بتزرعيه في قلبي.</li>
+      <li>حساسيتك الجميلة اللي بتخليني أحس بيكي</li>
+      <li>حبك اللي بيديني القوة أواجه به الدنيا.</li>
+    </ol>
+  </div>
+
+  <!-- التايملاين -->
+  <div id="timeline" class="section">
+    <h1 style="font-family: 'Tajawal', sans-serif; font-size: 2.5em; color: #3b113f;">⛓ تايملاين علاقتنا 🖤</h1>
+    <div class="timeline-container">
+      <div class="event"><span class="date">23 مارس 2024</span><span class="desc">أول مرة اتكلمنا</span></div>
+      <div class="event"><span class="date">6 أكتوبر 2024</span><span class="desc">قولتلك بحبك</span></div>
+      <div class="event"><span class="date">6 ديسمبر 2024</span><span class="desc">أول خروجة وأول هدية</span></div>
+      <div class="event"><span class="date">18 فبراير 2025</span><span class="desc">أول فلانتين لينا</span></div>
+      <div class="event"><span class="date">9 يونيو 2025</span><span class="desc">أول عيد ميلاد ليكي معايا</span></div>
+    </div>
+    <button id="backToReasonBtn" style="background-color: #2e1438;">رجوع</button>
+  </div>
+
+<!-- لعبة تخمين الرقم -->
+<div id="game" class="section">
+  <h1 style="color: #732d91;">🎲 لعبة تخمين الرقم</h1>
+  <p>فكر في رقم من 1 إلى 20، وحاول تخمنه!</p>
+  
+  <input type="number" id="guessInput" min="1" max="20" placeholder="اكتب رقمك هنا" style="padding:10px; font-size:1.2em; width: 150px; border-radius: 10px; border: 2px solid #732d91;" />
+  <button id="guessBtn" style="background-color:#732d91; color:#f3eac2; padding:10px 25px; border:none; border-radius: 20px; margin-left: 10px; cursor:pointer; font-size:1.1em;">خمن</button>
+  
+  <p id="feedback" style="margin-top: 20px; font-size: 1.3em; color: #4b2c62; min-height: 40px;"></p>
+  <p id="scoreDisplay" style="font-weight: bold; font-size: 1.2em; color: #2e1438;"></p>
+
+  <button id="restartBtn" style="display:none; margin-top: 20px; background-color: #4b1e62; color: #f3eac2; border:none; padding: 10px 20px; border-radius: 20px; cursor: pointer;">
+    إعادة اللعبة 🔄
+  </button>
+
+  <button id="backToCertBtn" style="background-color: #2e1438; margin-top: 30px;">رجوع</button>
+</div>
+
+  <!-- زر الموسيقى -->
+  <button id="playBtn">اضغط لتشغيل الموسيقى 🎵</button>
+  <audio id="bgMusic" loop>
+    <source src="Experience_song.mp3" type="audio/mp3" />
+  </audio>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    const playBtn = document.getElementById('playBtn');
+    const homeSection = document.getElementById('home');
+    const loveLetterSection = document.getElementById('loveLetter');
+    const reasonSection = document.getElementById('reason');
+    const timelineSection = document.getElementById('timeline');
+
+    document.getElementById('startBtn').onclick = () => {
+      homeSection.classList.remove('active');
+      loveLetterSection.classList.add('active');
+    };
+
+    document.getElementById('toReasonBtn').onclick = () => {
+      loveLetterSection.classList.remove('active');
+      reasonSection.classList.add('active');
+    };
+
+    document.getElementById('backToHomeFromLove').onclick = () => {
+      loveLetterSection.classList.remove('active');
+      homeSection.classList.add('active');
+    };
+
+    document.getElementById('backToReasonBtn').onclick = () => {
+      timelineSection.classList.remove('active');
+      reasonSection.classList.add('active');
+    };
+
+    playBtn.onclick = () => {
+      music.muted = false;
+      music.volume = 0.15;
+      music.play();
+      playBtn.style.display = 'none';
+    };
+
+
+    
+    // زر التايملاين
+    const timelineBtn = document.createElement('button');
+    timelineBtn.innerText = "مشوار علاقتنا 🖤⛓";
+    timelineBtn.style.backgroundColor = "#3a1a47";
+    timelineBtn.style.marginTop = "15px";
+    document.getElementById('reason').appendChild(timelineBtn);
+    timelineBtn.onclick = () => {
+      reasonSection.classList.remove('active');
+      timelineSection.classList.add('active');
+    };
+
+    // عداد الوقت من 23 مارس 2024
+    function updateCountUp() {
+      const startDate = new Date("2024-10-06T00:00:00");
+      const now = new Date();
+
+      const diff = now - startDate;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+      document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+    }
+
+    setInterval(updateCountUp, 1000);
+    updateCountUp();
+
+    
+  </script>
+<script>
+  // أسماء الصور (بدون الامتداد)
+  const imageNames = [
+    "imab", "imac", "imad", "imaf", "imag", "imah",
+    "imaj", "imak", "imal", "imam", "iman", "imap",
+    "imas", "imav", "imax", "imaz"
+  ];
+
+  // دالة لتوليد صورة عشوائية متطايرة
+  function createFloatingImage() {
+    const img = document.createElement("img");
+    img.src = ${imageNames[Math.floor(Math.random() * imageNames.length)]}.jpg;
+    img.className = "floating-img";
+    img.style.left = Math.random() * 100 + "vw";
+    img.style.animationDuration = (5 + Math.random() * 10) + "s";
+    img.style.width = "50px"; // حجم الصورة
+    img.style.height = "auto";
+    document.body.appendChild(img);
+
+    setTimeout(() => {
+      img.remove();
+    }, 15000);
+  }
+
+  // توليد صورة متطايرة كل فترة
+  setInterval(createFloatingImage, 2000);
+</script>
+</body>
+</html>
